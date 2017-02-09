@@ -25,7 +25,7 @@ DEBUG = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['0.0.0.0', 'vast-wave-89193.herokuapp.com', '127.0.0.1', 'www.waypointer.org']
+ALLOWED_HOSTS = ['0.0.0.0', 'waypointer.org', '127.0.0.1', 'www.waypointer.org']
 
 
 # Application definition
