@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-import dj_database_url
-
+from .secrets import *
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,9 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['0.0.0.0', 'waypointer.org', '127.0.0.1', 'www.waypointer.org']
 
@@ -81,9 +79,6 @@ WSGI_APPLICATION = 'waypoint_project.wsgi.application'
 
 # Database
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES = {'default': {}}
-DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -134,6 +129,3 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-
-DATABASES['default'] =  dj_database_url.config()
