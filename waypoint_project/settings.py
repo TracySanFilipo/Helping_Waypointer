@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['0.0.0.0', 'waypointer.org', '127.0.0.1', 'www.waypointer.org']
+ALLOWED_HOSTS = ['waypointer.org', '127.0.0.1', 'www.waypointer.org']
 
 
 # Application definition
